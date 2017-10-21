@@ -1,0 +1,4 @@
+othello.axion.bt.co.uk - - [03/Jul/1995:13:26:53 -0400] "GET /shuttle/missions/sts-71/images/images.html HTTP/1.0" 200 7634
+hellokitty.infomatch.com - - [04/Jul/1995:01:17:39 -0400] "GET /shuttle/missions/technology/sts-newsref/stsref-toc.html HTTP/1.0" 404 -
+drjo011a041.embratel.net.br - - [04/Jul/1995:11:00:42 -0400] "GET /images/hello/Hello.gif" 404 -
+hellokitty.infomatch.com - - [04/Jul/1995:15:45:33 -0400] "GET /shuttle/countdown/liftoff.html HTTP/1.0" 200 4535

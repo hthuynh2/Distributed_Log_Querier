@@ -1,0 +1,19 @@
+INSTALL
+--------
+Step 1: make workspace
+Step 2: make
+
+RUNNING
+-------
+To run client program: ./client_main
+To run server program: ./server_main
+Run client program on the querying machine
+Run server program on all VMs that act as the server. Need to run the server program on remote VMs before querying.
+While client program is running, use the following command to query for PATTERN: grep [OPTION]... PATTERN 
+Note: The program only query file with name vm<i>.log (with i is the number of VM) in out directory. Therefore, need to create .log files in out directory in each VM before running program
+
+UNIT TEST
+--------
+Step 1 : Copy the .log files in Unit Test Input directory to out directory (e.g. vm1.log for VM1, vm2.log for VM2,..)
+Step 2 : run ./server_main on any 4 VMs from 1 to 5.
+Step 3 : Run: ./client_main unit_test on the remain VM

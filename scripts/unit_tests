@@ -1,0 +1,9 @@
+grep hello
+grep -c -i r*
+grep -i gET
+grep -n test
+grep asdasd
+grep -v dsa
+grep 2$
+grep ^1
+grep GET
