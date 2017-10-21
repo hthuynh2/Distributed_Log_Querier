@@ -17,3 +17,12 @@ UNIT TEST
 Step 1 : Copy the .log files in Unit Test Input directory to out directory (e.g. vm1.log for VM1, vm2.log for VM2,..)
 Step 2 : run ./server_main on any 4 VMs from 1 to 5.
 Step 3 : Run: ./client_main unit_test on the remain VM
+
+
+Introduction:
+Client program to run grep on each system seperately and gather the results. 
+Design:
+The client gets the grep command entered by the user and sends the it to each non-faulty server. While waiting for the responses to arrive, the client executes the command locally on the its own log file. After receiving a response from every server, the client writes each result to a seperate file and prints the num- ber of lines found to match the input grep command.
+The server listens for incoming connections while idle. When an incoming grep request is received, it ex- ecutes the request locally by running the command on a new process and specifying the local log file as input. When the result is computed, the server sends the results back to the client. If the results are too large to be contained in one message, such as in the case of frequent patterns, the server first sends a mes- sage indicating the total length, and then sends the results in multiple parts.
+Unit Tests:
+Unit Testing can be performed with a special option to the client program: ./client main unit tests. A list of grep commands that is diverse in its constituents’ composition and function is predetermined and placed into the executable code’s preamble. If tests are requested to be run, the client takes input from this list of grep commands in order. After receiving each server’s response, it compares the precompiled, expected output of the command with the given response. If both outputs are the same, the test is deter- mined to pass.
